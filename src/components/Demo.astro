@@ -1,0 +1,24 @@
+---
+---
+<section id="demo" class="full">
+      <div class="sec-head">
+        <p class="label">Demo</p>
+        <h2>Break the pipeline.</h2>
+        <p>Every pull request on NeuroGuide ran unit, integration and end-to-end tests before merge, with IAM roles defined in Terraform. Pick a bad change and see where it stops.</p>
+      </div>
+      <div class="demo">
+        <div class="picker" role="group" aria-label="Pick a pull request">
+          <button type="button" data-k="ok" aria-pressed="true">Clean change<small>everything passes</small></button>
+          <button type="button" data-k="unit" aria-pressed="false">Broken logic<small>a unit test fails</small></button>
+          <button type="button" data-k="e2e" aria-pressed="false">Broken user flow<small>an end-to-end test fails</small></button>
+          <button type="button" data-k="iam" aria-pressed="false">Over-broad IAM role<small>wildcard permissions</small></button>
+        </div>
+        <div class="panel card">
+          <div class="panel-top"><span id="prTitle">pull request: add job-fit score endpoint</span><span>simulation</span></div>
+          <ol class="stages" id="stages"></ol>
+          <pre class="log" id="log" aria-live="polite"></pre>
+          <div class="verdict" id="verdict" data-v="ok"></div>
+        </div>
+      </div>
+      <p class="fine">Simulated run with fictional test names. No real pipeline is called.</p>
+    </section>
